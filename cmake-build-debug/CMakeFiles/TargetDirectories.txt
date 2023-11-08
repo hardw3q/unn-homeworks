@@ -1,0 +1,3 @@
+/Users/andreypankov/CLionProjects/SLI/cmake-build-debug/CMakeFiles/SLI.dir
+/Users/andreypankov/CLionProjects/SLI/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/andreypankov/CLionProjects/SLI/cmake-build-debug/CMakeFiles/rebuild_cache.dir
