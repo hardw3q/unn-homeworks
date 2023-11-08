@@ -1,5 +1,7 @@
 #include <stdio.h>
-#define LEN 10
+#include "stdlib.h"
+#include <time.h>
+#define LEN 500000
 int sortSlianie(int *a, int c){
     if (c == 1){
     }else{
@@ -42,12 +44,36 @@ int sortSlianie(int *a, int c){
         }
     }
 }
+void timeToConsole(){
+    time_t currentTime;
+    struct tm *localTime;
 
+    // Получаем текущее время
+    currentTime = time(NULL);
+
+    // Преобразуем текущее время в локальное время
+    localTime = localtime(&currentTime);
+
+    // Выводим текущее время
+    printf("Текущее время: %02d:%02d:%02d\n", localTime->tm_hour, localTime->tm_min, localTime->tm_sec);
+
+}
 int main() {
-    int a[LEN] = {2,3,5,1,3,4,5,4,7,3};
-    sortSlianie(a, LEN);
+    int massive[LEN];
+    int min = 1;
+    int max = LEN;
     for(int i = 0; i < LEN; i++){
-        printf("%d", a[i]);
+        massive[i] = rand() % (max - min) + min;;
+//        printf("%d ",massive[i]);
+//       printf("%d ", massive[i]);
+    }
+    timeToConsole();
+
+    sortSlianie(massive, LEN);
+    timeToConsole();
+
+    for(int i = 0; i < LEN; i++){
+        printf("%d ", massive[i]);
     }
     return 0;
 }
